@@ -1,70 +1,70 @@
-import React, { PureComponent } from "react";
+import React, { PureComponent } from 'react'
 
-import ChartExports from "./ChartExports";
-import ChartInfoBox from "./ChartInfoBox";
+import ChartExports from './ChartExports'
+import ChartInfoBox from './ChartInfoBox'
 
 const ellipsizeKeys = data => {
-  const ellipsized = {};
+  const ellipsized = {}
 
   Object.keys(data).forEach(key => {
-    const string = key.toString();
-    ellipsized[key] = string.length >= 12 ? `${string.slice(0, 10)}...` : string;
-  });
+    const string = key.toString()
+    ellipsized[key] = string.length >= 12 ? `${string.slice(0, 10)}...` : string
+  })
 
-  return ellipsized;
-};
+  return ellipsized
+}
 
 class Chart extends PureComponent {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.svgRef = React.createRef();
+    this.svgRef = React.createRef()
     this.state = {
       activeKey: null,
       ellipsized: ellipsizeKeys(props.data),
-      hovering: false
-    };
+      hovering: false,
+    }
 
-    this.handleMouseEnter = this.handleMouseEnter.bind(this);
-    this.handleMouseLeave = this.handleMouseLeave.bind(this);
+    this.handleMouseEnter = this.handleMouseEnter.bind(this)
+    this.handleMouseLeave = this.handleMouseLeave.bind(this)
 
-    this.handleDeselect = this.handleDeselect.bind(this);
-    this.handleToggle = this.handleToggle.bind(this);
+    this.handleDeselect = this.handleDeselect.bind(this)
+    this.handleToggle = this.handleToggle.bind(this)
   }
 
   componentDidUpdate(prevProps) {
-    const { data } = this.props;
+    const { data } = this.props
 
     if (data !== prevProps.data) {
-      this.setState({ ellipsized: ellipsizeKeys(data) });
+      this.setState({ ellipsized: ellipsizeKeys(data) })
     }
   }
 
   handleMouseEnter() {
-    this.setState({ hovering: true });
+    this.setState({ hovering: true })
   }
 
   handleMouseLeave() {
-    this.setState({ hovering: false });
+    this.setState({ hovering: false })
   }
 
   handleDeselect() {
-    this.setState({ activeKey: null });
+    this.setState({ activeKey: null })
   }
 
   handleToggle(activeKey) {
     this.setState(state => ({
-      activeKey: activeKey === state.activeKey ? null : activeKey
-    }));
+      activeKey: activeKey === state.activeKey ? null : activeKey,
+    }))
   }
 
   render() {
-    const { className, data, component: Component, ...props } = this.props;
-    const { activeKey, ellipsized, hovering } = this.state;
+    const { className, data, component: Component, ...props } = this.props
+    const { activeKey, ellipsized, hovering } = this.state
 
-    let classList = "chq-charts--wrap";
+    let classList = 'chq-charts--wrap'
     if (className) {
-      classList = `${classList} ${className}`;
+      classList = `${classList} ${className}`
     }
 
     return (
@@ -79,7 +79,6 @@ class Chart extends PureComponent {
           ellipsized={ellipsized}
           activeKey={activeKey}
           onDeselect={this.handleDeselect}
-          onToggle={this.handleToggle}
           svgRef={this.svgRef}
         />
         <ChartInfoBox
@@ -87,14 +86,9 @@ class Chart extends PureComponent {
           activeKey={activeKey}
           onDeselect={this.handleDeselect}
         />
-        <ChartExports
-          data={data}
-          hovering={hovering}
-          svgRef={this.svgRef}
-        />
       </div>
-    );
+    )
   }
 }
 
-export default Chart;
+export default Chart
