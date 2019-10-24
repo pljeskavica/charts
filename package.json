@@ -1,5 +1,5 @@
 {
-  "name": "@pljeskavica/charts",
+  "name": "@pljeskavica27/charts",
   "version": "1.2.2",
   "description": "An SVG charting library",
   "main": "dist/Charts.js",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CultureHQ/charts.git"
+    "url": "git+https://github.com/pljeskavica/charts.git"
   },
   "author": "Kevin Deisz",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/CultureHQ/charts/issues"
+    "url": "https://github.com/pljeskavica/charts/issues"
   },
-  "homepage": "https://github.com/CultureHQ/charts#readme",
+  "homepage": "https://github.com/pljeskavica/charts#readme",
   "peerDependencies": {
     "react": "^16",
     "react-dom": "^16"

@@ -1,7 +1,7 @@
 # @plejskavica/charts
 
 [![Build Status](https://github.com/plejskavica/charts/workflows/Push/badge.svg)](https://github.com/plejskavica/charts/actions)
-[![Package Version](https://img.shields.io/npm/v/@plejskavica/charts.svg)](https://www.npmjs.com/package/@plejskavica/charts)
+[![Package Version](https://img.shields.io/npm/v/@plejskavica27/charts.svg)](https://www.npmjs.com/package27/@plejskavica/charts)
 
 An SVG React charting library.
 
