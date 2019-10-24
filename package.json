@@ -1,5 +1,5 @@
 {
-  "name": "@culturehq/charts",
+  "name": "@pljeskavica/charts",
   "version": "1.2.2",
   "description": "An SVG charting library",
   "main": "dist/Charts.js",

@@ -1,13 +1,15 @@
-# @culturehq/charts
+# @plejskavica/charts
 
-[![Build Status](https://github.com/CultureHQ/charts/workflows/Push/badge.svg)](https://github.com/CultureHQ/charts/actions)
-[![Package Version](https://img.shields.io/npm/v/@culturehq/charts.svg)](https://www.npmjs.com/package/@culturehq/charts)
+[![Build Status](https://github.com/plejskavica/charts/workflows/Push/badge.svg)](https://github.com/plejskavica/charts/actions)
+[![Package Version](https://img.shields.io/npm/v/@plejskavica/charts.svg)](https://www.npmjs.com/package/@plejskavica/charts)
 
 An SVG React charting library.
 
 ## Getting started
 
-First, add `@culturehq/charts` to your `package.json` `dependencies`, then install using either `npm install` or `yarn install`.
+This is based off of @culture/charts
+
+First, add `@plejskavica/charts` to your `package.json` `dependencies`, then install using either `npm install` or `yarn install`.
 
 There are three basic chart types, `HorizontalBarChart`, `PieChart`, and `VerticalBarChart`. Each accepts two props:
 
@@ -18,7 +20,7 @@ There are three basic chart types, `HorizontalBarChart`, `PieChart`, and `Vertic
 
 * `rotateKeys = true` - whether or not to slightly rotate the key names in order to fit them better into the chart
 
-To get the styles, be sure to also import `@culturehq/charts/dist/style.css` into whatever stylesheet you're using.
+To get the styles, be sure to also import `@plejskavica/charts/dist/style.css` into whatever stylesheet you're using.
 
 ## Testing locally
 
@@ -26,7 +28,7 @@ You can run the tests by running `yarn test` and lint by running `yarn lint`. Yo
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/CultureHQ/charts.
+Bug reports and pull requests are welcome on GitHub at https://github.com/plejskavica/charts.
 
 ## License
 
