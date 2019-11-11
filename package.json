@@ -1,6 +1,6 @@
 {
   "name": "@pljeskavica27/charts",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "An SVG charting library",
   "main": "dist/Charts.js",
   "scripts": {
