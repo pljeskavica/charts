@@ -32,6 +32,11 @@ class Chart extends PureComponent {
     this.handleToggle = this.handleToggle.bind(this)
   }
 
+  componentDidCatch(err) {
+    // Temp fix; squash errors
+    // Currently it throws 1k errors every time the page loads
+  }
+
   componentDidUpdate(prevProps) {
     const { data } = this.props
 
