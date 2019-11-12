@@ -113,11 +113,6 @@ class PieChartSVG extends PureComponent {
     }
   }
 
-  componentDidCatch(err) {
-    // Temp fix; squash errors
-    // Currently it throws 1k errors every time the page loads
-  }
-
   componentDidMount() {
     this.beginInterval()
   }
@@ -160,7 +155,6 @@ class PieChartSVG extends PureComponent {
   render() {
     const { onToggle, onDeselect, svgRef } = this.props
     const { colors, slices } = this.state
-
     return (
       <svg
         className="chq-charts--chart"
